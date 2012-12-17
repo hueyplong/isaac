@@ -10,9 +10,10 @@ $bot = Isaac::Bot.new
   EOF
 end
 
-at_exit do
-  unless defined?(Test::Unit)
-    raise $! if $!
-    $bot.start
-  end
-end
+# Commenting this out as it causes local connection attempt after every rake
+#at_exit do
+#  unless defined?(Test::Unit)
+#    raise $! if $!
+#    $bot.start
+#  end
+#end
